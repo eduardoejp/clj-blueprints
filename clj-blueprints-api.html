@@ -1,0 +1,700 @@
+<html>
+  <head>
+    <title>clj-blueprints - clj-blueprints nil API documentation</title>
+    <link href="static/favicon.png" rel="icon" />
+    <link href="static/favicon.png" rel="shortcut icon" />
+    <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/wiki.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/internal.css" rel="stylesheet" />
+    <!-- TODO: are we using these (from clojure.org)? If so, add the files -->
+    <script src="file/view/code_highlighter.js" type="text/javascript"></script>
+    <script src="file/view/clojure.js" type="text/javascript"></script>
+    <style>.menuWrapper{height: 36px;}</style>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://www.wikispaces.com/_/2009051601/s/internal_ie.css" type="text/css" />
+    <![endif]-->
+  </head>
+<!--
+This document was auto-generated from the source by the clojure autodoc system.
+To report errors or ask questions about the overall documentation structure, formatting,
+etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
+For errors in the documentation of a particular namespace, contact the author of that
+namespace.
+-->
+  <body>
+    <div id="AllContentContainer">
+      <div id="Header">
+	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
+	<h1><a title="page header title" id="page-header" href="index.html">clj-blueprints</a></h1>
+      </div>
+      <div id="leftcolumn"><div style="text-align: center;"></div>
+<div class="menu">
+  <div class="WikiCustomNav WikiElement wiki">
+    <span class="toc-header"><span id="project-name">clj-blueprints</span> <span id="version"></span> API</span><br />
+    <ul>
+      <li><a class="wiki_link" href="index.html">Overview</a></li>
+      <li><a class="wiki_link" href="api-index.html">API Index</a></li>
+    </ul>
+    <span class="toc-header">Namespaces</span>
+    <ul id="left-sidebar-list">
+      <li><a href="clj-blueprints-api.html" class="wiki_link">clj-blueprints</a></li>
+    </ul>
+    
+    <a href="http://clojure.org" class="wiki_link">Clojure Home</a>
+  </div>
+</div>
+</div>
+      <div id="rightcolumn">
+	<div id="Content">
+	  <div class="contentBox"><div class="innerContentBox">
+              <div id="content_view" class="wiki wikiPage">
+                <div id="right-sidebar"><div id="toc">
+  <h1 class="nopad">Table of Contents</h1>
+  <div style="margin-left: 1em;" class="toc-section">
+    <a href="#toc0">Overview</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/*graph-db*">*graph-db*</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/add-edge!">add-edge!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/add-vertex!">add-vertex!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/as-map">as-map</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/as-read-only">as-read-only</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/automatic-index!">automatic-index!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/clear-db!">clear-db!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/close-db!">close-db!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/connected?">connected?</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/create-index!">create-index!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/db-edges">db-edges</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/db-vertices">db-vertices</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/disconnect">disconnect</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/drop-index!">drop-index!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/get-connection">get-connection</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/get-edges">get-edges</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/get-ends">get-ends</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/get-id">get-id</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/get-index">get-index</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/get-indices">get-indices</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/get-label">get-label</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/get-transaction-mode">get-transaction-mode</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/get-vertex">get-vertex</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/iget">iget</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/index-class">index-class</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/index-name">index-name</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/index-type">index-type</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/iput">iput</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/iremove">iremove</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/load-edge">load-edge</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/load-vertex">load-vertex</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/manual-index!">manual-index!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/migrate-graph!">migrate-graph!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/passoc!">passoc!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/pdissoc!">pdissoc!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/pget">pget</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/pkeys">pkeys</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/pvals">pvals</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/read-graph!">read-graph!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/remove!">remove!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/search-graph">search-graph</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/set-db!">set-db!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/set-transaction-mode">set-transaction-mode</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/with-graph-db">with-graph-db</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/with-tx">with-tx</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/write-graph!">write-graph!</a>
+    </div>
+    <br />
+  </div>
+</div>
+</div>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">clj-blueprints</span>
+  - <span id="header-project">clj-blueprints</span> <span id="header-version"></span> (<span id="header-status"></span>)
+  </h1>
+
+<br />Usage:
+<pre>
+(ns your-namespace
+  (:require <span id="long-name">clj-blueprints</span>))
+</pre><pre>
+</pre><h2>Overview</h2>
+<pre id="namespace-docstr"></pre>
+
+
+<br />
+<h2>Public Variables and Functions</h2>
+<div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/*graph-db*">*graph-db*</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">This dynamic var holds the currently used database.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L13" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/add-edge!">add-edge!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (add-edge! id v1 [label props] v2)
+       (add-edge! v1 lab-props v2)
+</pre>
+  <pre id="var-docstr">Adds an edge between vertex1 and vertex 2 given a vector like [label props-map]. The label must be a keyword and props-map can be nil.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L87" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/add-vertex!">add-vertex!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (add-vertex! id props)
+       (add-vertex! id)
+       (add-vertex!)
+</pre>
+  <pre id="var-docstr">Adds a vertex to the database. If given a hash-map, sets the properties of the vertex.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L81" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/as-map">as-map</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (as-map elem)
+</pre>
+  <pre id="var-docstr">Transforms an element to a Clojure hash-map.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L35" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/as-read-only">as-read-only</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (as-read-only)
+       (as-read-only item)
+</pre>
+  <pre id="var-docstr">When called with no arguments, this fn sets *graph-db* to be a read-only version of itself.
+When called with one argument (Graph, Vertex, Edge or Index), it returns a read only version of it.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L168" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/automatic-index!">automatic-index!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (automatic-index! kname class keys)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L132" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/clear-db!">clear-db!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (clear-db!)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L71" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/close-db!">close-db!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (close-db!)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L69" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/connected?">connected?</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (connected? v1 v2)
+</pre>
+  <pre id="var-docstr">Tells whether or not two vertices are connected.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L126" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/create-index!">create-index!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (create-index! kname class type)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L137" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/db-edges">db-edges</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (db-edges)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L75" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/db-vertices">db-vertices</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (db-vertices)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L73" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/disconnect">disconnect</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (disconnect v1 v2)
+</pre>
+  <pre id="var-docstr">Removes the edge between two vertices.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L129" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/drop-index!">drop-index!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (drop-index! kname)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L147" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/get-connection">get-connection</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (get-connection v1 v2)
+</pre>
+  <pre id="var-docstr">If vertex1 and vertex2 are connected by an edge, it returns that edge.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L120" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/get-edges">get-edges</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (get-edges vertex dir)
+       (get-edges vertex dir label)
+</pre>
+  <pre id="var-docstr">Gets the edges from a vertex given the direction (:in or :out) and an optional filtering label (as a keyword).</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L99" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/get-ends">get-ends</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (get-ends vertex dir label)
+       (get-ends vertex dir)
+</pre>
+  <pre id="var-docstr">In case you don't want to get the edges that meet a requirement but the vertices at the end of those, use get-ends just like get-edges.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L109" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/get-id">get-id</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (get-id elem)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L17" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/get-index">get-index</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (get-index kname class)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L143" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/get-indices">get-indices</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (get-indices)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L145" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/get-label">get-label</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (get-label edge)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L107" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/get-transaction-mode">get-transaction-mode</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (get-transaction-mode)
+</pre>
+  <pre id="var-docstr">Returns the transaction mode as either :automatic or :manual.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L48" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/get-vertex">get-vertex</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (get-vertex edge dir)
+</pre>
+  <pre id="var-docstr">Gets the :in or :out vertex from an edge.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L104" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/iget">iget</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (iget index key val)
+</pre>
+  <pre id="var-docstr">Gets an element from an index.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L157" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/index-class">index-class</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (index-class i)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L149" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/index-name">index-name</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (index-name i)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L151" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/index-type">index-type</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (index-type i)
+</pre>
+  <pre id="var-docstr">Returns whether the given index is :automatic or :manual.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L153" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/iput">iput</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (iput index key val element)
+</pre>
+  <pre id="var-docstr">Puts an element from an index.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L159" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/iremove">iremove</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (iremove index key val element)
+</pre>
+  <pre id="var-docstr">Removes an element from an index.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L161" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/load-edge">load-edge</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (load-edge id)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L79" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/load-vertex">load-vertex</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (load-vertex id)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L77" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/manual-index!">manual-index!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (manual-index! kname class)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L135" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/migrate-graph!">migrate-graph!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (migrate-graph! g1 g2)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L179" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/passoc!">passoc!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (passoc! elem prop v)
+       (passoc! elem prop v &amp; kvs)
+</pre>
+  <pre id="var-docstr">Assocs an element's property (given as a keyword).</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L22" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/pdissoc!">pdissoc!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (pdissoc! elem prop)
+</pre>
+  <pre id="var-docstr">Dissocs an element's property (given as a keyword).</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L26" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/pget">pget</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (pget elem prop)
+</pre>
+  <pre id="var-docstr">Gets an element's property (given as a keyword).</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L19" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/pkeys">pkeys</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (pkeys elem)
+</pre>
+  <pre id="var-docstr">Returns an element's keys as keywords.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L29" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/pvals">pvals</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (pvals elem)
+</pre>
+  <pre id="var-docstr">Returns an element's vals.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L32" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/read-graph!">read-graph!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (read-graph! input-stream)
+       (read-graph! input-stream buffer-size vertex-id edge-id edge-label)
+</pre>
+  <pre id="var-docstr">Reads data into the current *graph-db*</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L181" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/remove!">remove!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (remove! elem)
+</pre>
+  <pre id="var-docstr">Removes either a vertex or an edge from the Graph.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L92" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/search-graph">search-graph</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (search-graph type key val)
+</pre>
+  <pre id="var-docstr">Searches the Graph for a element of the given type (Vertex or Edge) with the given key-val combination.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L163" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/set-db!">set-db!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (set-db! graph-db)
+</pre>
+  <pre id="var-docstr">Given a Graph instance (like OrientGraph, TinkerGraph, etc), sets it as the global DB.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L66" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/set-transaction-mode">set-transaction-mode</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (set-transaction-mode mode)
+</pre>
+  <pre id="var-docstr">Sets the transaction mode as either :automatic or :manual.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L42" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/with-graph-db">with-graph-db</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (with-graph-db graph-db &amp; forms)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L63" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/with-tx">with-tx</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (with-tx &amp; forms)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L54" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/write-graph!">write-graph!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (write-graph! out-stream)
+       (write-graph! out-stream vertex-key-types edge-key-types)
+</pre>
+  <pre id="var-docstr">Writes data into the current *graph-db*</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L185" id="var-source">Source</a>
+</div>
+
+
+</div>
+              </div>
+            </div>
+          </div>
+	</div>
+	<div id="foot">
+	  <div style="text-align: center;" id="copyright">Copyright 2011 Eduardo Julian</div>
+	</div>
+      </div>
+      <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />
+      Clojure auto-documentation system by Tom Faulhaber.</div>
+    </div>
+    <!-- /AllContentContainer -->
+  </body>
+
+</html>
