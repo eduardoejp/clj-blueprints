@@ -7,7 +7,8 @@
             :comments "same as Clojure"}
   :dependencies [[org.clojure/clojure "1.2.0"]
                  [org.clojure/clojure-contrib "1.2.0"]
-                 [com.tinkerpop.blueprints/blueprints-core "0.7"]]
+                 [com.tinkerpop.blueprints/blueprints-core "0.7"]
+                 [active-vars "0.1.0"]]
   :dev-dependencies [[org.clojars.rayne/autodoc "0.8.0-SNAPSHOT"]]
   :repositories {"tinkerpop" "http://tinkerpop.com/maven2"}
   :autodoc {:name "clj-blueprints"
