@@ -53,7 +53,15 @@ namespace.
   <div style="margin-left: 1em;" class="toc-section">
     <a href="#toc0">Overview</a>
     <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clj-blueprints/*graph-db*">*graph-db*</a>
+      <a href="#clj-blueprints/*db*">*db*</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/*edges*">*edges*</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/*indices*">*indices*</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/*transaction-mode*">*transaction-mode*</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/*vertices*">*vertices*</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clj-blueprints/add-edge!">add-edge!</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
@@ -65,17 +73,11 @@ namespace.
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clj-blueprints/automatic-index!">automatic-index!</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clj-blueprints/clear-db!">clear-db!</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clj-blueprints/close-db!">close-db!</a>
+      <a href="#clj-blueprints/clear!">clear!</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clj-blueprints/connected?">connected?</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clj-blueprints/create-index!">create-index!</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clj-blueprints/db-edges">db-edges</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clj-blueprints/db-vertices">db-vertices</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clj-blueprints/disconnect">disconnect</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
@@ -91,11 +93,7 @@ namespace.
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clj-blueprints/get-index">get-index</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clj-blueprints/get-indices">get-indices</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clj-blueprints/get-label">get-label</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clj-blueprints/get-transaction-mode">get-transaction-mode</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clj-blueprints/get-vertex">get-vertex</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
@@ -139,7 +137,9 @@ namespace.
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clj-blueprints/set-transaction-mode">set-transaction-mode</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clj-blueprints/with-graph-db">with-graph-db</a>
+      <a href="#clj-blueprints/shutdown!">shutdown!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-blueprints/with-db">with-db</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
       <a href="#clj-blueprints/with-tx">with-tx</a>
     </div><div style="margin-left: 1em;" class="toc-entry">
@@ -159,7 +159,7 @@ namespace.
   (:require <span id="long-name">clj-blueprints</span>))
 </pre><pre>
 </pre><h2>Overview</h2>
-<pre id="namespace-docstr"></pre>
+<pre id="namespace-docstr">Wrapper for the TinkerPop Blueprints API for Graph DBMSs. It supports version 0.7 of the Blueprints API.</pre>
 
 
 <br />
@@ -167,13 +167,53 @@ namespace.
 <div id="var-entry">
   <br />
   <hr />
-  <h2 id="clj-blueprints/*graph-db*">*graph-db*</h2>
+  <h2 id="clj-blueprints/*db*">*db*</h2>
   <span id="var-type">var</span><br />
   <pre id="var-usage"></pre>
   <pre id="var-docstr">This dynamic var holds the currently used database.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L13" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L20" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/*edges*">*edges*</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">All the edges.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L81" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/*indices*">*indices*</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L151" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/*transaction-mode*">*transaction-mode*</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">The transaction mode. Can be either :automatic or :manual.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L55" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/*vertices*">*vertices*</h2>
+  <span id="var-type">var</span><br />
+  <pre id="var-usage"></pre>
+  <pre id="var-docstr">All the vertices.</pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L79" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -185,7 +225,7 @@ namespace.
   <pre id="var-docstr">Adds an edge between vertex1 and vertex 2 given a vector like [label props-map]. The label must be a keyword and props-map can be nil.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L87" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L93" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -198,7 +238,7 @@ namespace.
   <pre id="var-docstr">Adds a vertex to the database. If given a hash-map, sets the properties of the vertex.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L81" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L87" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -209,7 +249,7 @@ namespace.
   <pre id="var-docstr">Transforms an element to a Clojure hash-map.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L35" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L42" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -218,11 +258,11 @@ namespace.
   <pre id="var-usage">Usage: (as-read-only)
        (as-read-only item)
 </pre>
-  <pre id="var-docstr">When called with no arguments, this fn sets *graph-db* to be a read-only version of itself.
+  <pre id="var-docstr">When called with no arguments, this fn sets *db* to be a read-only version of itself.
 When called with one argument (Graph, Vertex, Edge or Index), it returns a read only version of it.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L168" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L174" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -233,29 +273,18 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr"></pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L132" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L138" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clj-blueprints/clear-db!">clear-db!</h2>
+  <h2 id="clj-blueprints/clear!">clear!</h2>
   <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (clear-db!)
+  <pre id="var-usage">Usage: (clear!)
 </pre>
-  <pre id="var-docstr"></pre>
+  <pre id="var-docstr">Clears the *db*</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L71" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clj-blueprints/close-db!">close-db!</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (close-db!)
-</pre>
-  <pre id="var-docstr"></pre>
-  
-  
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L69" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L77" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -266,7 +295,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr">Tells whether or not two vertices are connected.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L126" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L132" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -277,29 +306,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr"></pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L137" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clj-blueprints/db-edges">db-edges</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (db-edges)
-</pre>
-  <pre id="var-docstr"></pre>
-  
-  
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L75" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clj-blueprints/db-vertices">db-vertices</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (db-vertices)
-</pre>
-  <pre id="var-docstr"></pre>
-  
-  
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L73" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L143" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -310,7 +317,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr">Removes the edge between two vertices.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L129" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L135" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -321,7 +328,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr"></pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L147" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L153" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -332,7 +339,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr">If vertex1 and vertex2 are connected by an edge, it returns that edge.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L120" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L126" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -344,7 +351,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr">Gets the edges from a vertex given the direction (:in or :out) and an optional filtering label (as a keyword).</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L99" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L105" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -356,7 +363,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr">In case you don't want to get the edges that meet a requirement but the vertices at the end of those, use get-ends just like get-edges.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L109" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L115" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -367,7 +374,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr"></pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L17" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L24" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -378,18 +385,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr"></pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L143" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clj-blueprints/get-indices">get-indices</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (get-indices)
-</pre>
-  <pre id="var-docstr"></pre>
-  
-  
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L145" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L149" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -400,18 +396,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr"></pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L107" id="var-source">Source</a>
-</div><div id="var-entry">
-  <br />
-  <hr />
-  <h2 id="clj-blueprints/get-transaction-mode">get-transaction-mode</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (get-transaction-mode)
-</pre>
-  <pre id="var-docstr">Returns the transaction mode as either :automatic or :manual.</pre>
-  
-  
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L48" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L113" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -422,7 +407,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr">Gets the :in or :out vertex from an edge.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L104" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L110" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -433,7 +418,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr">Gets an element from an index.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L157" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L163" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -444,7 +429,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr"></pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L149" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L155" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -455,7 +440,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr"></pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L151" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L157" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -466,7 +451,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr">Returns whether the given index is :automatic or :manual.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L153" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L159" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -477,7 +462,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr">Puts an element from an index.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L159" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L165" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -488,7 +473,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr">Removes an element from an index.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L161" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L167" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -499,7 +484,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr"></pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L79" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L85" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -510,7 +495,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr"></pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L77" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L83" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -521,7 +506,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr"></pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L135" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L141" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -532,7 +517,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr"></pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L179" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L185" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -544,7 +529,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr">Assocs an element's property (given as a keyword).</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L22" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L29" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -555,7 +540,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr">Dissocs an element's property (given as a keyword).</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L26" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L33" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -566,7 +551,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr">Gets an element's property (given as a keyword).</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L19" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L26" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -577,7 +562,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr">Returns an element's keys as keywords.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L29" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L36" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -588,7 +573,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr">Returns an element's vals.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L32" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L39" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -597,10 +582,10 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-usage">Usage: (read-graph! input-stream)
        (read-graph! input-stream buffer-size vertex-id edge-id edge-label)
 </pre>
-  <pre id="var-docstr">Reads data into the current *graph-db*</pre>
+  <pre id="var-docstr">Reads data into the current *db*</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L181" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L187" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -611,7 +596,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr">Removes either a vertex or an edge from the Graph.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L92" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L98" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -622,7 +607,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr">Searches the Graph for a element of the given type (Vertex or Edge) with the given key-val combination.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L163" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L169" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -633,7 +618,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr">Given a Graph instance (like OrientGraph, TinkerGraph, etc), sets it as the global DB.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L66" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L72" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -644,18 +629,29 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr">Sets the transaction mode as either :automatic or :manual.</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L42" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L49" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
-  <h2 id="clj-blueprints/with-graph-db">with-graph-db</h2>
-  <span id="var-type">macro</span><br />
-  <pre id="var-usage">Usage: (with-graph-db graph-db &amp; forms)
+  <h2 id="clj-blueprints/shutdown!">shutdown!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (shutdown!)
 </pre>
   <pre id="var-docstr"></pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L63" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L75" id="var-source">Source</a>
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-blueprints/with-db">with-db</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (with-db graph-db &amp; forms)
+</pre>
+  <pre id="var-docstr"></pre>
+  
+  
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L69" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -666,7 +662,7 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-docstr"></pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L54" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L60" id="var-source">Source</a>
 </div><div id="var-entry">
   <br />
   <hr />
@@ -675,10 +671,10 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
   <pre id="var-usage">Usage: (write-graph! out-stream)
        (write-graph! out-stream vertex-key-types edge-key-types)
 </pre>
-  <pre id="var-docstr">Writes data into the current *graph-db*</pre>
+  <pre id="var-docstr">Writes data into the current *db*</pre>
   
   
-  <a href="http://github.com/eduardoejp/clj-blueprints/blob/14357754d746126f15edd813858bc5314dba06b5/src/clj_blueprints.clj#L185" id="var-source">Source</a>
+  <a href="http://github.com/eduardoejp/clj-blueprints/blob/764c5ef77e01cf5663c23a01e2c69c8024e05949/src/clj_blueprints.clj#L191" id="var-source">Source</a>
 </div>
 
 
