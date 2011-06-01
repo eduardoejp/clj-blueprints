@@ -23,12 +23,18 @@
 ; Element fns
 (defn get-id "" [elem] (.getId elem))
 
-(defn pget "Gets an element's property (given as a keyword)."
-  [elem prop] (.getProperty elem (name prop)))
+(defn pget "Retrieves an element's property (given as a keyword)."
+  [elem prop]
+  (let [v (.getProperty elem (name prop))]
+    (if (and (string? v)
+             (= (first v) \:))
+      (keyword (subs v 1))
+      v))
+  )
 
 (defn passoc! "Assocs an element's property (given as a keyword)."
-  ([elem prop v] (.setProperty elem (name prop) v) elem)
-  ([elem prop v & kvs] (.setProperty elem (name prop) v) (apply passoc! elem kvs)))
+  ([elem prop v] (.setProperty elem (name prop) (if (keyword? v) (str v) v)) elem)
+  ([elem prop v & kvs] (.setProperty elem (name prop) (if (keyword? v) (str v) v)) (apply passoc! elem kvs)))
 
 (defn pdissoc! "Dissocs an element's property (given as a keyword)."
   [elem prop] (.removeProperty elem (name prop)) elem)
@@ -59,7 +65,7 @@
 
 (defmacro with-tx "Evaluates the given forms inside a transaction."
   [& forms]
-  `(if (= :manual (get-transaction-mode))
+  `(if (= :manual @*transaction-mode*)
      (do (.startTransaction *db*)
        (try
          (let [r# (do ~@forms)] (.stopTransaction *db* +tx-success+) r#)
@@ -169,7 +175,7 @@
 (defn iremove "Removes an element from an index." [index key val element] (.remove index key val element))
 
 (defn search-graph
-  "Searches the Graph for a element of the given type (Vertex or Edge) with the given key-val combination."
+  "Searches the Graph for an element of the given type #{:vertices :edges} with the given key-val combination."
   [type key val] (-> (get-index type (case type :vertices Vertex, :edges Edge)) (iget (name key) val)))
 
 ; Read-Only
