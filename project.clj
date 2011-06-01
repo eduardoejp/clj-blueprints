@@ -1,4 +1,4 @@
-(defproject clj-blueprints "0.1.0"
+(defproject clj-blueprints "0.1.0-SNAPSHOT"
   :description "Wrapper for the TinkerPop Blueprints API for Graph DBMSs. It supports version 0.7 of the Blueprints API."
   :url "https://github.com/eduardoejp/clj-blueprints"
   :license {:name "Eclipse Public License - v 1.0"

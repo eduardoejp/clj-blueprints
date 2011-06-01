@@ -46,7 +46,7 @@
 (def +tx-success+ TransactionalGraph$Conclusion/SUCCESS)
 (def +tx-failure+ TransactionalGraph$Conclusion/FAILURE)
 
-(defn set-transaction-mode
+(defn set-transaction-mode!
   "Sets the transaction mode as either :automatic or :manual."
   [mode]
   (let [mode (case mode :automatic TransactionalGraph$Mode/AUTOMATIC, :manual TransactionalGraph$Mode/MANUAL)]
@@ -57,7 +57,8 @@
   (get {TransactionalGraph$Mode/AUTOMATIC :automatic, TransactionalGraph$Mode/MANUAL :manual}
        (.getTransactionMode *db*)))
 
-(defmacro with-tx "" [& forms]
+(defmacro with-tx "Evaluates the given forms inside a transaction."
+  [& forms]
   `(if (= :manual (get-transaction-mode))
      (do (.startTransaction *db*)
        (try
@@ -66,7 +67,8 @@
      (throw (Exception. "Transaction mode must be MANUAL."))))
 
 ; Graph fns
-(defmacro with-db "" [graph-db & forms]
+(defmacro with-db "Evaluates the given forms with the given Graph DB bound to *db*."
+  [graph-db & forms]
   `(binding [*db* ~graph-db] ~@forms))
 
 (defn set-db! "Given a Graph instance (like OrientGraph, TinkerGraph, etc), sets it as the global DB."
@@ -74,7 +76,7 @@
 
 (defn shutdown! "" [] (.shutdown *db*))
 
-(defn clear! "Clears the *db*" [] (.clear *db*))
+(defn clear! "Clears *db* of all nodes and edges." [] (.clear *db*))
 
 (defactive *vertices* "All the vertices." (.getVertices *db*))
 
@@ -84,16 +86,16 @@
 
 (defn load-edge "" [id] (.getEdge *db* id))
 
-(defn add-vertex!
+(defn vertex!
   "Adds a vertex to the database. If given a hash-map, sets the properties of the vertex."
   ([id props] (let [v (.addVertex *db* id)] (when props (apply passoc! v (interleave (map name (keys props)) (vals props)))) v))
-  ([id] (if-not (map? id) (.addVertex *db* id) (add-vertex! nil id)))
+  ([id] (if-not (map? id) (.addVertex *db* id) (vertex! nil id)))
   ([] (.addVertex *db* nil)))
 
-(defn add-edge!
+(defn link!
   "Adds an edge between vertex1 and vertex 2 given a vector like [label props-map]. The label must be a keyword and props-map can be nil."
   ([id v1 [label props] v2] (let [e (.addEdge *db* id v1 v2 (name label))] (when props (apply passoc! e (interleave (map name (keys props)) (vals props)))) e))
-  ([v1 lab-props v2] (add-edge! nil v1 lab-props v2)))
+  ([v1 lab-props v2] (link! nil v1 lab-props v2)))
 
 (defn remove! "Removes either a vertex or an edge from the Graph."
   [elem]
@@ -123,16 +125,16 @@
      (concat (get-ends vertex :in) (get-ends vertex :out))
      (map #(get-vertex % (case dir :in :out, :out :in)) (get-edges vertex dir)))))
 
-(defn get-connection
+(defn get-link
   "If vertex1 and vertex2 are connected by an edge, it returns that edge."
   [v1 v2]
   (or (some #(when (= v2 (get-vertex % :out)) %) (get-edges v1 :in))
     (some #(when (= v2 (get-vertex % :in)) %) (get-edges v1 :out))))
 
-(defn connected? "Tells whether or not two vertices are connected."
-  [v1 v2] (if (get-connection v1 v2) true false))
+(defn linked? "Tells whether or not two vertices have an edge between them."
+  [v1 v2] (if (get-link v1 v2) true false))
 
-(defn disconnect "Removes the edge between two vertices." [v1 v2] (remove! (get-connection v1 v2)))
+(defn unlink! "Removes the edge between two vertices." [v1 v2] (remove! (get-link v1 v2)))
 
 ; Indexes
 (defn automatic-index! "" [kname class keys]
@@ -182,12 +184,12 @@ When called with one argument (Graph, Vertex, Edge or Index), it returns a read 
             Index (ReadOnlyIndex. item))))
 
 ; GraphML
-(defn migrate-graph! "" [ g1 g2] (GraphMigrator/migrateGraph g1 g2))
+(defn migrate-graph! "" [g1 g2] (GraphMigrator/migrateGraph g1 g2))
 
-(defn read-graph! "Reads data into the current *db*"
+(defn read-graph! "Reads GraphML formatted data into the current *db*"
   ([input-stream] (GraphMLReader/inputGraph *db* input-stream))
   ([input-stream buffer-size vertex-id edge-id edge-label] (GraphMLReader/inputGraph *db* input-stream buffer-size vertex-id edge-id edge-label)))
 
-(defn write-graph! "Writes data into the current *db*"
+(defn write-graph! "Writes GraphML formatted data from the current *db*"
   ([out-stream] (GraphMLWriter/outputGraph *db* out-stream))
   ([out-stream vertex-key-types edge-key-types] (GraphMLWriter/outputGraph *db* out-stream vertex-key-types edge-key-types)))
