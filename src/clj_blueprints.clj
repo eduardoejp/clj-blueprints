@@ -46,7 +46,7 @@
   [elem] (for [k (pkeys elem)] (pget k)))
 
 (defn as-map "Transforms an element to a Clojure hash-map."
-  [elem] (apply hash-map (flatten (for [k (pkeys elem)] [k (pget elem k)]))))
+  [elem] (apply hash-map (reduce concat (for [k (pkeys elem)] [k (pget elem k)]))))
 
 ; Transactions
 (def +tx-success+ TransactionalGraph$Conclusion/SUCCESS)
@@ -59,7 +59,7 @@
     (.setTransactionMode *db* mode)))
 
 (defactive *transaction-mode*
-  "The transaction mode. Can be either :automatic or :manual."
+  "[ActiveVar] The transaction mode. Can be either :automatic or :manual."
   (get {TransactionalGraph$Mode/AUTOMATIC :automatic, TransactionalGraph$Mode/MANUAL :manual}
        (.getTransactionMode *db*)))
 
@@ -84,9 +84,11 @@
 
 (defn clear! "Clears *db* of all nodes and edges." [] (.clear *db*))
 
-(defactive *vertices* "All the vertices." (.getVertices *db*))
+(defactive *vertices* "[ActiveVar] All the vertices."
+  (.getVertices *db*))
 
-(defactive *edges* "All the edges." (.getEdges *db*))
+(defactive *edges* "[ActiveVar] All the edges."
+  (.getEdges *db*))
 
 (defn load-vertex "" [id] (.getVertex *db* id))
 
@@ -143,20 +145,17 @@
 (defn unlink! "Removes the edge between two vertices." [v1 v2] (remove! (get-link v1 v2)))
 
 ; Indexes
-(defn automatic-index! "" [kname class keys]
+(defn create-automatic-index! ""
+  [kname class keys]
   (.createAutomaticIndex *db* (name kname) class (->> keys seq (map name) (apply hash-set))))
 
-(defn manual-index! "" [kname class] (.createManualIndex *db* (name kname) class))
-
-(defn create-index! "" [kname class type]
-  (case type
-    :automatic (.createAutomaticIndex *db* (name kname) class type)
-    :manual 
-    ))
+(defn create-manual-index! ""
+  [kname class]
+  (.createManualIndex *db* (name kname) class))
 
 (defn get-index "" [kname class] (let [class (case class :vertices Index/VERTICES, :edges Index/EDGES)] (.getIndex *db* (name kname) class)))
 
-(defactive *indices* "" (.getIndices *db*))
+(defactive *indices* "[ActiveVar] The indices of the graph." (.getIndices *db*))
 
 (defn drop-index! "" [kname] (.dropIndex *db* (name kname)))
 
@@ -174,16 +173,12 @@
 
 (defn iremove "Removes an element from an index." [index key val element] (.remove index key val element))
 
-(defn search-graph
-  "Searches the Graph for an element of the given type #{:vertices :edges} with the given key-val combination."
-  [type key val] (-> (get-index type (case type :vertices Vertex, :edges Edge)) (iget (name key) val)))
-
 ; Read-Only
 (defn as-read-only
 "When called with no arguments, this fn sets *db* to be a read-only version of itself.
 When called with one argument (Graph, Vertex, Edge or Index), it returns a read only version of it."
   ([] (set-db! (ReadOnlyGraph. *db*)))
-  ([item] (case (class item)
+  ([item] (condp = (class item)
             Graph (ReadOnlyGraph. item)
             Vertex (ReadOnlyVertex. item)
             Edge (ReadOnlyEdge. item)
