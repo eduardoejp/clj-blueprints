@@ -80,7 +80,6 @@ Shortcuts:<br />
   <pre>
 <span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/as-map">as-map</a><span id="line-content">                       function      clj-blueprints     Transforms an element to a Clojure hash-map..
 </span></span><span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/as-read-only">as-read-only</a><span id="line-content">                 function      clj-blueprints     When called with no arguments, this fn sets *db* t...
-</span></span><span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/automatic-index!">automatic-index!</a><span id="line-content">             function      clj-blueprints     .
 </span></span></pre>
 </div><div id="index-body">
   <h2 id="B"><span id="section-head">B</span></h2>
@@ -90,7 +89,8 @@ Shortcuts:<br />
   <h2 id="C"><span id="section-head">C</span></h2>
   <pre>
 <span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/clear!">clear!</a><span id="line-content">                       function      clj-blueprints     Clears *db* of all nodes and edges..
-</span></span><span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/create-index!">create-index!</a><span id="line-content">                function      clj-blueprints     .
+</span></span><span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/create-automatic-index!">create-automatic-index!</a><span id="line-content">      function      clj-blueprints     .
+</span></span><span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/create-manual-index!">create-manual-index!</a><span id="line-content">         function      clj-blueprints     .
 </span></span></pre>
 </div><div id="index-body">
   <h2 id="D"><span id="section-head">D</span></h2>
@@ -101,7 +101,7 @@ Shortcuts:<br />
 </div><div id="index-body">
   <h2 id="E"><span id="section-head">E</span></h2>
   <pre>
-<span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/*edges*">*edges*</a><span id="line-content">                      var           clj-blueprints     All the edges..
+<span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/*edges*">*edges*</a><span id="line-content">                      var           clj-blueprints     [ActiveVar] All the edges..
 </span></span></pre>
 </div><div id="index-body">
   <h2 id="F"><span id="section-head">F</span></h2>
@@ -125,7 +125,7 @@ Shortcuts:<br />
 </div><div id="index-body">
   <h2 id="I"><span id="section-head">I</span></h2>
   <pre>
-<span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/*indices*">*indices*</a><span id="line-content">                    var           clj-blueprints     .
+<span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/*indices*">*indices*</a><span id="line-content">                    var           clj-blueprints     [ActiveVar] The indices of the graph..
 </span></span><span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/iget">iget</a><span id="line-content">                         function      clj-blueprints     Gets an element from an index..
 </span></span><span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/index-class">index-class</a><span id="line-content">                  function      clj-blueprints     .
 </span></span><span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/index-name">index-name</a><span id="line-content">                   function      clj-blueprints     .
@@ -152,8 +152,7 @@ Shortcuts:<br />
 </div><div id="index-body">
   <h2 id="M"><span id="section-head">M</span></h2>
   <pre>
-<span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/manual-index!">manual-index!</a><span id="line-content">                function      clj-blueprints     .
-</span></span><span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/migrate-graph!">migrate-graph!</a><span id="line-content">               function      clj-blueprints     .
+<span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/migrate-graph!">migrate-graph!</a><span id="line-content">               function      clj-blueprints     .
 </span></span></pre>
 </div><div id="index-body">
   <h2 id="N"><span id="section-head">N</span></h2>
@@ -185,15 +184,14 @@ Shortcuts:<br />
 </div><div id="index-body">
   <h2 id="S"><span id="section-head">S</span></h2>
   <pre>
-<span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/search-graph">search-graph</a><span id="line-content">                 function      clj-blueprints     Searches the Graph for an element of the given typ...
-</span></span><span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/set-db!">set-db!</a><span id="line-content">                      function      clj-blueprints     Given a Graph instance (like OrientGraph, TinkerGr...
+<span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/set-db!">set-db!</a><span id="line-content">                      function      clj-blueprints     Given a Graph instance (like OrientGraph, TinkerGr...
 </span></span><span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/set-transaction-mode!">set-transaction-mode!</a><span id="line-content">        function      clj-blueprints     Sets the transaction mode as either :automatic or ...
 </span></span><span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/shutdown!">shutdown!</a><span id="line-content">                    function      clj-blueprints     .
 </span></span></pre>
 </div><div id="index-body">
   <h2 id="T"><span id="section-head">T</span></h2>
   <pre>
-<span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/*transaction-mode*">*transaction-mode*</a><span id="line-content">           var           clj-blueprints     The transaction mode. Can be either :automatic or ...
+<span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/*transaction-mode*">*transaction-mode*</a><span id="line-content">           var           clj-blueprints     [ActiveVar] The transaction mode. Can be either :a...
 </span></span></pre>
 </div><div id="index-body">
   <h2 id="U"><span id="section-head">U</span></h2>
@@ -203,7 +201,7 @@ Shortcuts:<br />
 </div><div id="index-body">
   <h2 id="V"><span id="section-head">V</span></h2>
   <pre>
-<span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/*vertices*">*vertices*</a><span id="line-content">                   var           clj-blueprints     All the vertices..
+<span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/*vertices*">*vertices*</a><span id="line-content">                   var           clj-blueprints     [ActiveVar] All the vertices..
 </span></span><span id="section-content"> <a href="clj-blueprints-api.html#clj-blueprints/vertex!">vertex!</a><span id="line-content">                      function      clj-blueprints     Adds a vertex to the database. If given a hash-map...
 </span></span></pre>
 </div><div id="index-body">
