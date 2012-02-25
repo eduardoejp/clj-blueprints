@@ -1,6 +1,6 @@
 {:namespaces
  ({:source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints/clj-blueprints-api.html",
    :name "clj-blueprints",
@@ -11,10 +11,10 @@
  ({:name "*db*",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L25",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L25",
    :dynamic true,
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/*db*",
    :doc "This dynamic var holds the currently used database.",
@@ -25,9 +25,9 @@
    :name "add-listener",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L264",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L264",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/add-listener",
    :doc
@@ -39,9 +39,9 @@
    :name "as-map",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L55",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L55",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/as-map",
    :doc "Transforms an element to a Clojure hash-map.",
@@ -52,9 +52,9 @@
    :name "as-read-only",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L187",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L187",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/as-read-only",
    :doc
@@ -66,9 +66,9 @@
    :name "clear!",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L85",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L85",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/clear!",
    :doc "Clears *db* of all nodes and edges.",
@@ -79,9 +79,9 @@
    :name "create-automatic-index!",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L149",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L149",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/create-automatic-index!",
    :doc "",
@@ -92,9 +92,9 @@
    :name "create-manual-index!",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L153",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L153",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/create-manual-index!",
    :doc "",
@@ -105,9 +105,9 @@
    :name "current-buffer-size",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L71",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L71",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/current-buffer-size",
    :doc "Current Transaction Buffer Size",
@@ -118,9 +118,9 @@
    :name "drop-index!",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L162",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L162",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/drop-index!",
    :doc "",
@@ -131,9 +131,9 @@
    :name "event-graph",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L262",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L262",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/event-graph",
    :doc "",
@@ -144,9 +144,9 @@
    :name "get-edges",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L116",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L116",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/get-edges",
    :doc
@@ -158,9 +158,9 @@
    :name "get-ends",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L126",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L126",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/get-ends",
    :doc
@@ -172,9 +172,9 @@
    :name "get-id",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L29",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L29",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/get-id",
    :doc "",
@@ -185,9 +185,9 @@
    :name "get-index",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L157",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L157",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/get-index",
    :doc "",
@@ -198,9 +198,9 @@
    :name "get-indices",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L159",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L159",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/get-indices",
    :doc "Returns the indices of the graph.",
@@ -211,9 +211,9 @@
    :name "get-label",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L124",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L124",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/get-label",
    :doc "",
@@ -224,9 +224,9 @@
    :name "get-link",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L137",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L137",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/get-link",
    :doc
@@ -238,9 +238,9 @@
    :name "get-max-buffer-size",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L69",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L69",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/get-max-buffer-size",
    :doc "Get Max Transaction Buffer Size",
@@ -251,9 +251,9 @@
    :name "get-raw-graph",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L269",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L269",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/get-raw-graph",
    :doc "Returns the graph wrapped by an EventGraph.",
@@ -264,9 +264,9 @@
    :name "get-vertex",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L121",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L121",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/get-vertex",
    :doc "Gets the :in or :out vertex from an edge.",
@@ -277,9 +277,9 @@
    :name "get-vertices",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L87",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L87",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/get-vertices",
    :doc "Returns all the vertices.",
@@ -300,9 +300,9 @@
    :name "graph-listener",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L234",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L234",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/graph-listener",
    :doc
@@ -314,9 +314,9 @@
    :name "iget",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L174",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L174",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/iget",
    :doc "Gets an element from an index.",
@@ -327,9 +327,9 @@
    :name "index-class",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L164",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L164",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/index-class",
    :doc "",
@@ -340,9 +340,9 @@
    :name "index-name",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L166",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L166",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/index-name",
    :doc "",
@@ -353,9 +353,9 @@
    :name "index-type",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L168",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L168",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/index-type",
    :doc "Returns whether the given index is :automatic or :manual.",
@@ -366,9 +366,9 @@
    :name "iput",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L178",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L178",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/iput",
    :doc "Puts an element from an index.",
@@ -379,9 +379,9 @@
    :name "iremove",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L182",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L182",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/iremove",
    :doc "Removes an element from an index.",
@@ -393,9 +393,9 @@
    :name "link!",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L103",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L103",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/link!",
    :doc
@@ -407,9 +407,9 @@
    :name "linked?",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L143",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L143",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/linked?",
    :doc "Tells whether or not two vertices have an edge between them.",
@@ -420,9 +420,9 @@
    :name "load-edge",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L95",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L95",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/load-edge",
    :doc "",
@@ -433,9 +433,9 @@
    :name "load-vertex",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L93",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L93",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/load-vertex",
    :doc "",
@@ -446,9 +446,9 @@
    :name "migrate-graph!",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L198",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L198",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/migrate-graph!",
    :doc "",
@@ -459,9 +459,9 @@
    :name "passoc!",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L38",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L38",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/passoc!",
    :doc "Assocs an element's property (given as a keyword).",
@@ -472,9 +472,9 @@
    :name "pdissoc!",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L46",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L46",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/pdissoc!",
    :doc "Dissocs an element's property (given as a keyword).",
@@ -485,9 +485,9 @@
    :name "pget",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L31",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L31",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/pget",
    :doc "Retrieves an element's property (given as a keyword).",
@@ -498,9 +498,9 @@
    :name "pkeys",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L49",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L49",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/pkeys",
    :doc "Returns an element's keys as keywords.",
@@ -511,9 +511,9 @@
    :name "pvals",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L52",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L52",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/pvals",
    :doc "Returns an element's vals.",
@@ -524,9 +524,9 @@
    :name "read-graph-json!",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L223",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L223",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/read-graph-json!",
    :doc "Reads GraphSON formatted data into the current *db*.",
@@ -540,9 +540,9 @@
    :name "read-graph-ml!",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L200",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L200",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/read-graph-ml!",
    :doc
@@ -554,9 +554,9 @@
    :name "remove!",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L109",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L109",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/remove!",
    :doc "Removes either a vertex or an edge from the Graph.",
@@ -567,9 +567,9 @@
    :name "set-db!",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L78",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L78",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/set-db!",
    :doc
@@ -581,9 +581,9 @@
    :name "set-max-buffer-size",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L70",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L70",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/set-max-buffer-size",
    :doc "Set Max Transaction Buffer Size",
@@ -594,9 +594,9 @@
    :name "shutdown!",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L83",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L83",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/shutdown!",
    :doc "",
@@ -607,9 +607,9 @@
    :name "tinker-graph",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L273",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L273",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/tinker-graph",
    :doc "",
@@ -620,9 +620,9 @@
    :name "unlink!",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L146",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L146",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/unlink!",
    :doc "Removes the edge between two vertices.",
@@ -630,14 +630,14 @@
    :line 146,
    :file "src/clj_blueprints.clj"}
   {:arglists ([id props] [id] []),
-   :name "vertex!",
+   :name "vertex",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L97",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L97",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
-   "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/vertex!",
+   "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/vertex",
    :doc
    "Adds a vertex to the database. If given a hash-map, sets the properties of the vertex.",
    :var-type "function",
@@ -647,9 +647,9 @@
    :name "with-db",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L74",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L74",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/with-db",
    :doc
@@ -661,9 +661,9 @@
    :name "with-tx",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L62",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L62",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/with-tx",
    :doc "Evaluates the given forms inside a transaction.",
@@ -675,9 +675,9 @@
    :name "write-graph-json!",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L227",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L227",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/write-graph-json!",
    :doc
@@ -690,9 +690,9 @@
    :name "write-graph-ml!",
    :namespace "clj-blueprints",
    :source-url
-   "http://github.com/eduardoejp/clj-blueprints/blob/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj#L212",
+   "http://github.com/eduardoejp/clj-blueprints/blob/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj#L212",
    :raw-source-url
-   "http://github.com/eduardoejp/clj-blueprints/raw/2462e73a52a3e8c509bbda69a32a6370774a7c9b/src/clj_blueprints.clj",
+   "http://github.com/eduardoejp/clj-blueprints/raw/a629b8fcda50ede8e662e014bdec6e3d30c4586d/src/clj_blueprints.clj",
    :wiki-url
    "http://eduardoejp.github.com/clj-blueprints//clj-blueprints-api.html#clj-blueprints/write-graph-ml!",
    :doc
