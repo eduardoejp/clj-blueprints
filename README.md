@@ -42,6 +42,7 @@ Working with the database:
 	  (form-n ...))
 
 Working with vertices and eges:
+
 	(with-tx
 	  (let [v1 (vertex {:first-name "John", :last-name "Doe", :age 20, :country "USA"})
 	        v2 (vertex {:first-name "Jane", :last-name "Doe", :age 25, :country "USA"})]
