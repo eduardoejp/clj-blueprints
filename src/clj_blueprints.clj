@@ -94,10 +94,10 @@
 
 (defn load-edge "" [id] (.getEdge *db* id))
 
-(defn vertex!
+(defn vertex
   "Adds a vertex to the database. If given a hash-map, sets the properties of the vertex."
   ([id props] (let [v (.addVertex *db* id)] (when props (apply passoc! v (interleave (map name (keys props)) (vals props)))) v))
-  ([id] (if-not (map? id) (.addVertex *db* id) (vertex! nil id)))
+  ([id] (if-not (map? id) (.addVertex *db* id) (vertex nil id)))
   ([] (.addVertex *db* nil)))
 
 (defn link!
