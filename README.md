@@ -12,7 +12,7 @@ Simply add this to your leiningen deps: `[clj-blueprints "0.1.0"]`
 Documentation
 -------------
 
-The documentation can be found here: http://eduardoejp.github.com/blueprints/
+The documentation can be found here: http://eduardoejp.github.com/clj-blueprints/
 
 Examples
 --------
